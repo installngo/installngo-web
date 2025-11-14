@@ -29,3 +29,14 @@ html {
   -ms-overflow-style: none;
   overflow-y: scroll;
 }
+
+/* Footer */
+.bg-footer {
+  background-color: var(--color-footer);
+}
+.text-footer-primary {
+  color: var(--color-footer-primary);
+}
+.text-footer-secondary {
+  color: var(--color-footer-secondary);
+}

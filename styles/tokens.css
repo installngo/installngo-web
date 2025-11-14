@@ -1,6 +1,6 @@
 /* Default theme */
 :root[data-theme="default"] {
-  --color-background: #ffffff;
+  --color-background: #f5f5f5;
   --color-foreground: #171717;
 
   /* Loader */
@@ -13,11 +13,47 @@
   --toast-error-bg: #ef4444;
   --toast-info-bg: #3b82f6;
   --toast-text: #ffffff;
+
+  /* Topbar - Menu and Submenu */
+  --topbar-bg: #f5f5f5;
+  --topbar-text: #666666;
+  --topbar-border: #e0e0e0;
+
+  --menu-bg: #f5f5f5;
+  --menu-text: #2b2c2d;
+  --menu-hover-bg: #e0e0e0;
+  --menu-hover-text: #111111;
+  --menu-active-bg: #e0e0e0;
+  --menu-active-text: #2b2c2d;
+
+  --submenu-bg: #f5f5f5;
+  --submenu-text: #333333;
+  --submenu-hover-bg: #e0e0e0;
+  --submenu-hover-text: #111111;
+  --submenu-active-bg: #b0b0b0;
+  --submenu-active-text: #ffffff;
+
+  /* Footer */
+  --color-footer: #2b2c2d;
+  --color-footer-primary: #878787;
+  --color-footer-secondary: #ffffff;
+
+  /* Buttons */
+  --button-primary: #2b2c2d;
+  --button-primary-hover: #999999;
+  --button-text-inverse: #ffffff;
+
+  --button-secondary: #d1d1d1;
+  --button-secondary-hover: #bfbfbf;
+  --button-secondary-text: #333333;
+
+  --button-danger: #ef4444;
+  --button-danger-hover: #dc2626;
+  --button-danger-text: #ffffff;
 }
 
-/* Academy theme */
 :root[data-theme="academy"] {
-  --color-background: #f9f9ff;
+  --color-background: #f5f5f5;
   --color-foreground: #1f1f3d;
 
   /* Loader */
@@ -30,4 +66,41 @@
   --toast-error-bg: #f87171;
   --toast-info-bg: #60a5fa;
   --toast-text: #ffffff;
+
+  /* Topbar - Menu and Submenu */
+  --topbar-bg: #0747a6;
+  --topbar-text: #deebff;
+  --topbar-border: #e0e0e0;
+
+  --menu-bg: #ffffff;
+  --menu-text: #deebff;
+  --menu-hover-bg: #042a6a;
+  --menu-hover-text: #ffffff;
+  --menu-active-bg: #033681;
+  --menu-active-text: #deebff;
+
+  --submenu-bg: #f5f5f5;
+  --submenu-text: #333333;
+  --submenu-hover-bg: #e0e0e0;
+  --submenu-hover-text: #111111;
+  --submenu-active-bg: #b0b0b0;
+  --submenu-active-text: #ffffff;
+
+  /* Footer */
+  --color-footer: #2b2c2d;
+  --color-footer-primary: #878787;
+  --color-footer-secondary: #ffffff;
+
+  /* Buttons */
+  --button-primary: #0747a6;
+  --button-primary-hover: #042a6a;
+  --button-text-inverse: #ffffff;
+
+  --button-secondary: #d1d1d1;
+  --button-secondary-hover: #bfbfbf;
+  --button-secondary-text: #333333;
+
+  --button-danger: #ef4444;
+  --button-danger-hover: #dc2626;
+  --button-danger-text: #ffffff;
 }
