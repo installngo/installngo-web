@@ -1,0 +1,33 @@
+/* Default theme */
+:root[data-theme="default"] {
+  --color-background: #ffffff;
+  --color-foreground: #171717;
+
+  /* Loader */
+  --loader-overlay: rgba(0, 0, 0, 0.3);
+  --loader-border: #6366f1;
+  --loader-text: #ffffff;
+
+  /* Toasts */
+  --toast-success-bg: #10b981;
+  --toast-error-bg: #ef4444;
+  --toast-info-bg: #3b82f6;
+  --toast-text: #ffffff;
+}
+
+/* Academy theme */
+:root[data-theme="academy"] {
+  --color-background: #f9f9ff;
+  --color-foreground: #1f1f3d;
+
+  /* Loader */
+  --loader-overlay: rgba(0, 0, 0, 0.2);
+  --loader-border: #7c3aed;
+  --loader-text: #ffffff;
+
+  /* Toasts */
+  --toast-success-bg: #34d399;
+  --toast-error-bg: #f87171;
+  --toast-info-bg: #60a5fa;
+  --toast-text: #ffffff;
+}
