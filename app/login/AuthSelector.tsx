@@ -14,7 +14,6 @@ export default function AuthSelector() {
   if (mode === "signin") return <EmailAuthForm onBack={() => setMode("select")} />;
   if (mode === "signup") return <SignUpForm onBack={() => setMode("select")} />;
 
-  // Default selection screen
   return (
     <div className="text-center space-y-5">
       <div className="flex flex-row gap-3 justify-center flex-wrap">
