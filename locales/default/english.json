@@ -1,3 +1,35 @@
 {
-  "home_title": "Install & Go Web Admin Portal"
+  "home_title": "InstallnGo Web Admin Portal",
+  "login": "Login",
+
+  "mobileNotSupportedTitle": "Limited Access",
+  "mobileNotSupportedMessage": "For a better experience, please use a laptop or desktop device.",
+
+  "welcomeTitle": "Welcome to InstallnGo",
+  "welcomeSubtitle": "Manage your academy, courses, inventory, and business all in one place. The future of fashion business management starts here.",
+
+  "signUpAsOrganization": "Sign up as Organization",
+  "signInAsOrganization": "Login as Organization",
+  "signInAsCustomer": "Login as Customer",
+
+  "signup_form_title": "Organization Sign up",
+  "signup_form_subtitle": "Register you Orgnaization",
+  "ph_organizationName": "Organization Name",
+  "err_organizationName": "Enter your organization name",
+  "ph_email": "Email",
+  "err_email": "Enter your email",
+  "err_invalid_email": "Invalid email address.",
+  "ph_password": "Password",
+  "err_password": "Enter your password",
+  "ph_confirmPassword": "Confirm Password",
+  "err_confirmPassword": "Enter your confirm password",
+  "err_passwordNotMatch": "Passwords do not match",
+  "ph_organizationType": "Organization Type",
+  "err_organizationType": "Select the organization type",
+  "ph_organizationCategory": "Organization Category",
+  "err_organizationCategory": "Select the organization category",
+
+  "back": "Back",
+  "signingUp": "Signing up...",
+  "signUp": "Sign Up"
 }

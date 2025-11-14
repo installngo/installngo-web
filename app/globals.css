@@ -40,3 +40,77 @@ html {
 .text-footer-secondary {
   color: var(--color-footer-secondary);
 }
+
+/* Parent menu hover & active */
+.menu-hover {
+  background-color: var(--menu-bg);
+  color: var(--menu-text);
+}
+.menu-hover:hover {
+  background-color: var(--menu-hover-bg);
+  color: var(--menu-hover-text);
+}
+
+.menu-active {
+  background-color: var(--menu-active-bg);
+  color: var(--menu-active-text);
+}
+
+/* Submenu hover & active */
+.submenu-hover {
+  background-color: var(--submenu-bg);
+  color: var(--submenu-text);
+}
+.submenu-hover:hover {
+  background-color: var(--submenu-hover-bg);
+  color: var(--submenu-hover-text);
+}
+
+.submenu-active {
+  background-color: var(--menu-active-bg);
+  color: var(--menu-active-text);
+}
+
+/* Optional: smooth dropdown transition */
+.submenu-container {
+  background-color: var(--submenu-bg);
+}
+
+.coupon-card {
+  background-color: var(--coupon-bg);
+  border: 1px dotted var(--coupon-border);
+  border-radius: 8px;
+  box-shadow: var(--card-shadow);
+  padding: 1rem;
+  color: var(--color-primary-text);
+}
+
+.coupon-status-active {
+  color: var(--coupon-active);
+}
+
+.coupon-status-expired {
+  color: var(--coupon-expired);
+}
+
+.coupon-type-private {
+  background-color: var(--coupon-type-private);
+  color: #fff;
+}
+
+.coupon-type-public {
+  background-color: var(--coupon-type-public);
+  color: #fff;
+}
+
+.coupon-link {
+  color: var(--link-color);
+}
+
+.coupon-link:hover {
+  color: var(--link-hover);
+}
+
+.react-datepicker-popper {
+  z-index: 9999 !important;
+}

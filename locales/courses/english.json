@@ -1,0 +1,186 @@
+{
+  "courses": "My Courses",
+  "manageCoursesSubtitle": "Manage your courses and coupons",
+  
+  "create_coupon_button": "Create Coupon",
+  "create_course_button": "Create Course",
+
+  "noCoursesFound": " No courses found!!!",
+  "noCoursesSubtitle": "Start by creating a new course to see it here!",
+
+  "create_course": "Create Course",
+  "edit_course": "Edit Course",
+  "view_course": "View Course",
+
+  "create_course_subtitle": "Create Course and enjoy",
+  "edit_course_subtitle": "Edit Course and update it",
+  "view_course_subtitle": "View Course with the details",
+
+  "course_analytics": "Analytics",
+  "course_details": "Course Details",
+  "course_advanced_settings": "Advanced Settings",
+  "course_contents": "Contents",
+  "course_students_enrolled": "Students Enrolled",
+
+  "cancel_button": "Cancel",
+  "previous_button": "Previous",
+  "next_button": "Next",
+  "add_content_button": "Add Contents",
+  "advanced_settings_button": "Advanced Settings",
+  "save_button": "Save",
+  "submit_button": "Submit",
+  "delete_button": "Delete",
+
+  "all_mandatory_fields": "All fields marked with an asterisk (*) are required",
+
+  "paid_course": "Is Paid Course?",
+  "hp_paid_course": "(If the course is paid, then price fields will be enabled below)",
+
+  "course_title": "Course Title",
+  "enter_course_title": "Enter your course title",
+  "course_title_required": "Course title is required",
+
+  "course_description": "Course Description",
+  "enter_course_description": "Enter your course description",
+  "course_description_required": "Course description is required",
+
+  "course_thumbnail": "Add Thumbnail",
+  "recommended_thumbnail_size": "Recommended: 1200×720px PNG/JPEG",
+  "change_thumbnail_image": "Change thumbnail image",
+  "course_thumbnail_required": "Course thumbnail is required",
+
+  "category": "Category",
+  "select_category": "-- Select --",
+  "category_required": "Select the category",
+
+  "subcategory": "Subcategory",
+  "select_subcategory": "-- Select --",
+  "subcategory_required": "Select the subcategory",
+
+  "original_price": "Original Price",
+  "enter_original_price": "Enter original price",
+  "original_price_required": "Original price is required",
+
+  "discount_must_be_less": "Discount price must be less than original price",
+
+  "discount_price": "Discount Price",
+  "enter_discount_price": "Enter discount price",
+  "discount_not_same": "Discount price cannot be equal to original price",
+  "discount_price_required": "Discount price is required",
+
+  "effective_price": "Effective Price",
+
+  "course_validity": "Validity",
+  "select_validity": "-- Select --",
+  "validity_type_required": "Select Validity Type",
+
+  "expiry_date": "Course Expiry Date",
+  "expiry_date_required": "Course expiry date is required",  
+
+  "single_validity": "Validity Period",
+  "select_single_validity": "-- Select --",
+  "single_validity_required": "Select Course Validity Period",
+
+  "mark_as_featured": "Mark as Featured",
+  "hp_mark_as_featured": "Switch ON, in case you want to feature this course on Student home screen",
+
+  "mark_as_new": "Mark as New",
+  "hp_mark_as_new": "Toggle ON, if this course will have NEW tag",
+
+  "course_has_offline_material": "Course has Offline Material for Shipment",
+  "hp_course_has_offline_material": "Switch ON to collect students address and send them physical study material",
+
+  "my_drive": "My Drive",
+  "upload_button": "Upload Files",
+  "new_folder_button": "New Folder",
+  "empty_message": "Upload your files that are related to the course!",
+
+  "rename_option":"Rename",
+  "delete_option": "Delete",
+  "lock_option": "Lock",
+
+  "folder_label": "Folder",
+
+  "new_folder_name": "New Folder",
+  "name_column": "Name",
+  "created_date_column": "Created Date",
+  "actions_column": "Actions",
+
+  "new_folder_modal_title": "New Folder",
+  "folder_name": "Folder Name",
+  "hp_folder_name": "enter your folder name related to the contents",
+  "folder_name_placeholder": "Enter you folder name",
+
+  "rename_modal_title": "Rename Folder",
+  "delete_modal_title": "Confirm Delete?",
+  "delete_confirm_text": "Are you sure want to delete it. Once deleted, we cannot recover it. So review again before deleting the folder/file?",
+
+  "updating_course": "Updating course...",
+  "creating_course": "Creating course...",
+  "course_updated": "Course updated successfully!",
+  "course_created": "Course created successfully!",
+
+  "manage_coupons": "Manage Coupons",
+  "manage_coupons_subtitle": "Manage you coupons and applicable courses.",
+
+  "coupons_list": "Coupons",
+  "coupon_details": "Coupon Details",
+  "applicable_courses": "Applicable Courses",
+  "coupon_analytics": "Analytics",
+
+  "search_coupon": "Search Coupon...",
+  "no_coupons_found": "No Coupons Found!!!",
+
+  "applicable_courses_button": "Applicable Courses",
+  "close_button": "Close",
+  "add_new_button": "New Coupon",
+
+  "coupon_title": "Coupon Title",
+  "enter_coupon_title": "Enter your coupon title",
+  "coupon_title_required": "Coupon title is required",
+
+  "coupon_code": "Coupon Code",
+  "enter_coupon_code": "Enter your coupon code",
+  "coupon_code_required": "Coupon code is required",
+
+  "discount_type": "Discount Type",
+  "fixed_discount": "Fixed Discount Amount",
+  "enter_fixed_discount": "Enter fixed discount amount",
+  "fixed_discount_required": "Fixed discount amount is required",
+
+  "percentage_discount": "Percentage Discount",
+  "enter_percentage_discount": "Enter percentage discount",
+  "percentage_discount_required": "Percentage discount is required",
+
+  "max_uses": "Maximum Uses",
+  "enter_max_uses": "Enter the max uses",
+  "max_uses_required": "Maximum uses is required",
+  "hp_max_uses": "Maximum number of times this coupon can be used across all users.",
+
+  "per_user_limit": "Usage per student",
+  "enter_per_user_limit": "Enter the usage limit",
+  "per_user_limit_required": "User limit is required",
+  "hp_per_user_limit": "Maximum number of times a single user can use this coupon.",
+
+  "public_coupon": "Coupon Type (Public/Private)",
+  "hp_public_coupon": "If selected, this coupon can be used by anyone (public). Otherwise, it is private and only shareable by admin.",
+
+  "visible_in_purchase": "Coupon Visibility",
+  "hp_visible_in_purchase": "If selected, the coupon will be shown during course purchase. Only applies if the coupon is public.",
+
+  "lifetime_coupon": "Coupon Lifetime?",
+  "hp_lifetime_coupon": "If selected, this coupon will never expire; start and end dates are ignored.",
+
+  "start_date": "Coupon Start Date",
+  "start_date_required": "Coupon start date is required",
+
+  "end_date": "Coupon End Date",
+  "end_date_required": "Coupon end date is required",
+
+  "end_date_invalid": "Coupon end date is invalid",
+
+  "updating_coupon": "Updating coupon...",
+  "creating_coupon": "Creating coupon...",
+  "coupon_updated": "Coupon updated successfully!",
+  "coupon_created": "Coupon created successfully!"
+}

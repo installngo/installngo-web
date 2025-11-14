@@ -1,3 +1,23 @@
 {
-  "home_title": "Install & Go Web Admin Portal"
+  "login": "Login",
+  "logout": "Logout",
+  "welcomeTitle": "Welcome to InstallnGo",
+  "welcomeSubtitle": "Manage your organization efficiently",
+  "rightsReserved": "All rights reserved.",
+  "mobileNotSupportedTitle": "Limited Access",
+  "mobileNotSupportedMessage": "For a better experience, please use a laptop or desktop device.",
+  "signInAsOrganization": "Sign in as Organization",
+  "signInAsCustomer": "Sign in as Customer",
+  "emailLogin": "Login with Email",
+  "phoneLogin": "Login with Phone",
+  "next": "Next",
+  "back": "Back",
+  "submit": "Submit",
+  "continue": "Continue",
+  "enterEmail": "Enter your email",
+  "enterPhone": "Enter your phone number",
+  "otpVerification": "OTP Verification",
+  "enterOtp": "Enter OTP",
+  "verify": "Verify",
+  "resendOtp": "Resend OTP"
 }

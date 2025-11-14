@@ -50,6 +50,83 @@
   --button-danger: #ef4444;
   --button-danger-hover: #dc2626;
   --button-danger-text: #ffffff;
+
+  --modal-background: #ffffff;
+  --modal-border: #d1d1d1;
+  --modal-title-text: #172b4d;
+  --modal-subtitle-text: #6b778c;
+  --modal-tab-border: #dfe1e6;
+  --modal-tab-label: #6b778c;
+  --modal-tab-focus: #2684ff;
+
+  --field-label: #6b778c;
+  --field-mandatory: #de250b;
+
+  --field-disabled-background: #dfe1e6;
+  --field-disabled-text: #402b4d;
+
+  --field-error: #de250b;
+  --field-helper: #6b778c;
+
+  --field-placeholder: #6b778c;
+  --field-input-text: #402b4d;
+
+  --field-background: #fafbfc;
+  --field-border: #dfe1e6;
+
+  --field-border-focus: #2684ff;
+
+  --field-icon: #6b778c;
+  --field-icon-hover: #172b4d;
+  --field-icon-square-hover: #dfe1e6;
+
+  --field-icon-folder: #ecc94b;
+  --field-icon-doc: #3b82f6;
+
+  --color-primary: #172b4d;
+  --color-primary-text: #172b4d;
+  --color-secondary-text: #6b778c;
+  --color-muted-text: #6b778c;
+
+  --bg-light: #f9f9f9;
+  --bg-lighter: #ffffff;
+  --bg-dark: #e0e0e0;
+
+  --border-color: #d1d1d1;
+  --border-hover: #b0b0b0;
+
+  --card-bg: #fafafa;
+  --card-border: #e0e0e0;
+  --card-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  --card-shadow-hover: 0 6px 14px rgba(0, 0, 0, 0.12);
+
+  --card-title-text: #172b4d;
+  --card-value-text: #2563eb;
+
+  --coupon-active: #22c55e;
+  --coupon-expired: #ef4444;
+  --coupon-bg: #e9f2ff;
+  --coupon-border: #b6d4fe;
+  --coupon-type-private: #4459c0;
+  --coupon-type-public: #007bff;
+  --link-color: #2563eb;
+  --link-hover: #1d4ed8;
+
+  /* Profile Dropdown Colors */
+  --profile-bg: #ffffff;
+  --profile-text: #111827;
+  --profile-border: rgba(0, 0, 0, 0.1);
+  --profile-hover-bg: #f3f4f6;
+  --profile-hover-text: #000000;
+  --profile-logout-text: #ef4444;
+
+  /* Profile Button / Avatar */
+  --avatar-bg: #9ca3af;
+  --avatar-hover-ring: #60a5fa;
+  --avatar-text: #ffffff;
+
+  /* Transition */
+  --transition-duration: 150ms;
 }
 
 :root[data-theme="academy"] {
@@ -103,4 +180,81 @@
   --button-danger: #ef4444;
   --button-danger-hover: #dc2626;
   --button-danger-text: #ffffff;
+
+  --modal-background: #ffffff;
+  --modal-border: #d1d1d1;
+  --modal-title-text: #172b4d;
+  --modal-subtitle-text: #6b778c;
+  --modal-tab-border: #dfe1e6;
+  --modal-tab-label: #6b778c;
+  --modal-tab-focus: #2684ff;
+
+  --field-label: #6b778c;
+  --field-mandatory: #de250b;
+
+  --field-disabled-background: #dfe1e6;
+  --field-disabled-text: #402b4d;
+
+  --field-error: #de250b;
+  --field-helper: #6b778c;
+
+  --field-placeholder: #6b778c;
+  --field-input-text: #402b4d;
+
+  --field-background: #fafbfc;
+  --field-border: #dfe1e6;
+
+  --field-border-focus: #2684ff;
+
+  --field-icon: #6b778c;
+  --field-icon-hover: #172b4d;
+  --field-icon-square-hover: #dfe1e6;
+
+  --field-icon-folder: #ecc94b;
+  --field-icon-doc: #3b82f6;
+
+  --color-primary: #172b4d;
+  --color-primary-text: #172b4d;
+  --color-secondary-text: #6b778c;
+  --color-muted-text: #6b778c;
+
+  --bg-light: #f9f9f9;
+  --bg-lighter: #ffffff;
+  --bg-dark: #e0e0e0;
+
+  --border-color: #d1d1d1;
+  --border-hover: #b0b0b0;
+
+  --card-bg: #fafafa;
+  --card-border: #e0e0e0;
+  --card-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  --card-shadow-hover: 0 6px 14px rgba(0, 0, 0, 0.12);
+
+  --card-title-text: #172b4d;
+  --card-value-text: #2563eb;
+
+  --coupon-active: #22c55e;
+  --coupon-expired: #ef4444;
+  --coupon-bg: #e9f2ff;
+  --coupon-border: #b6d4fe;
+  --coupon-type-private: #4459c0;
+  --coupon-type-public: #007bff;
+  --link-color: #2563eb;
+  --link-hover: #1d4ed8;
+
+  /* Profile Dropdown Colors */
+  --profile-bg: #ffffff;
+  --profile-text: #111827;
+  --profile-border: rgba(0, 0, 0, 0.1);
+  --profile-hover-bg: #f3f4f6;
+  --profile-hover-text: #000000;
+  --profile-logout-text: #ef4444;
+
+  /* Profile Button / Avatar */
+  --avatar-bg: #9ca3af;
+  --avatar-hover-ring: #60a5fa;
+  --avatar-text: #ffffff;
+
+  /* Transition */
+  --transition-duration: 150ms;
 }

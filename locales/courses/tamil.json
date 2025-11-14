@@ -1,0 +1,46 @@
+{
+    "create_new_course": "Create New Course",
+    "fill_details_course": "Create New/Edit your Courses",
+
+    "all_mandatory_fields": "All fields marked with an asterisk (*) are required",
+
+    "course_title": "Course Title",
+    "enter_course_title": "Enter your course title",
+
+    "course_description": "Course Description",
+    "enter_course_description": "Enter your course description",
+
+    "category": "Category",
+    "select_category": "Select Category",
+
+    "subcategory": "Subcategory",
+    "select_subcategory": "Select Subcategory",
+
+    "paid_course": "Is Paid Course?",
+
+    "original_price": "Original Price",
+    "enter_original_price": "Enter original price",
+
+    "discount_price": "Discount Price",
+    "enter_discount_price": "Enter discount price",
+
+    "effective_price": "Effective Price",
+
+    "course_validity": "Course Duration Type",
+
+    "expiry_date": "Course Expiry Date",
+
+    "advanced_settings": "Advanced Settings",
+
+    "mark_as_featured": "Mark as Featured",
+    "hp_mark_as_featured": "Switch ON, in case you want to feature this course on Student home screen",
+
+    "mark_as_new": "Mark as New",
+    "hp_mark_as_new": "Toggle ON, if this course will have NEW tag",
+
+    "course_has_offline_material": "Course has Offline Material for Shipment",
+    "hp_course_has_offline_material": "Switch ON to collect students address and send them physical study material",
+
+    "cancel": "Cancel",
+    "save": "Save"
+}
