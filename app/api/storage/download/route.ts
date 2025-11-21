@@ -3,7 +3,10 @@ import { getSignedUrl } from "@aws-sdk/cloudfront-signer";
 
 const CLOUDFRONT_DOMAIN = process.env.CLOUDFRONT_DOMAIN!;
 const CLOUDFRONT_KEY_PAIR_ID = process.env.CLOUDFRONT_KEY_PAIR_ID!;
-const CLOUDFRONT_PRIVATE_KEY = process.env.CLOUDFRONT_PRIVATE_KEY!;
+const CLOUDFRONT_PRIVATE_KEY_BASE64 = process.env.CLOUDFRONT_PRIVATE_KEY_BASE64!;
+
+// Decode Base64 to PEM format
+const CLOUDFRONT_PRIVATE_KEY = Buffer.from(CLOUDFRONT_PRIVATE_KEY_BASE64, "base64").toString("utf-8");
 
 export async function GET(req: NextRequest) {
   try {
@@ -15,13 +18,10 @@ export async function GET(req: NextRequest) {
     // Expire in 5 minutes
     const expiresAt = new Date(Date.now() + 5 * 60 * 1000);
 
-    // Fix the private key
-    const privateKey = CLOUDFRONT_PRIVATE_KEY.replace(/\\n/g, "\n");
-
     const signedUrl = getSignedUrl({
       url,
       keyPairId: CLOUDFRONT_KEY_PAIR_ID,
-      privateKey,
+      privateKey: CLOUDFRONT_PRIVATE_KEY,
       dateLessThan: expiresAt,
     });
 
