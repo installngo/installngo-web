@@ -44,8 +44,8 @@ export default function CouponModalWrapper({
     }
   }, [token, safeStart, safeStop]);
 
-  const fetchMasterData = useCallback(async () => {
-    const loaderId = safeStart("Loading...");
+  const fetchDiscountTypes = useCallback(async () => {
+    const loaderId = safeStart("Loading Discount Types...");
     try {
       const res = await fetch("/api/code-subcode", {
         method: "POST",
@@ -67,11 +67,12 @@ export default function CouponModalWrapper({
   }, [token, safeStart, safeStop]);
 
   useEffect(() => {
-    if (isOpen) {
-      fetchCoupons();
-      fetchMasterData();
-    }
-  }, [isOpen, fetchCoupons, fetchMasterData]);
+    if (!isOpen) return;
+
+    fetchCoupons();
+    fetchDiscountTypes();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isOpen]);
 
   return (
     <ManageCouponModal

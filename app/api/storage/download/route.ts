@@ -15,10 +15,13 @@ export async function GET(req: NextRequest) {
     // Expire in 5 minutes
     const expiresAt = new Date(Date.now() + 5 * 60 * 1000);
 
+    // Fix the private key
+    const privateKey = CLOUDFRONT_PRIVATE_KEY.replace(/\\n/g, "\n");
+
     const signedUrl = getSignedUrl({
       url,
       keyPairId: CLOUDFRONT_KEY_PAIR_ID,
-      privateKey: CLOUDFRONT_PRIVATE_KEY,
+      privateKey,
       dateLessThan: expiresAt,
     });
 
