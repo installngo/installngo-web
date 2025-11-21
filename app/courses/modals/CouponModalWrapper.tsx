@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback } from "react";
 import ManageCouponModal from "@/components/coupons/ManageCouponModal";
 import { useAuth } from "@/contexts/AuthContext";
 import { Course } from "@/components/courses/types/Course";

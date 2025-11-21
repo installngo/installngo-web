@@ -29,7 +29,9 @@
   "advanced_settings_button": "Advanced Settings",
   "save_button": "Save",
   "submit_button": "Submit",
-  "delete_button": "Delete",
+  "add_button": "Add",
+  "edit_button": "Edit",
+  "delete_button": "Delete",  
 
   "all_mandatory_fields": "All fields marked with an asterisk (*) are required",
 
@@ -182,5 +184,14 @@
   "updating_coupon": "Updating coupon...",
   "creating_coupon": "Creating coupon...",
   "coupon_updated": "Coupon updated successfully!",
-  "coupon_created": "Coupon created successfully!"
+  "coupon_created": "Coupon created successfully!",
+
+  "manage_categories_button": "Manage Categories",
+  "manage_categories": "Manage Categories/SubCategories",
+  "manage_categories_subtitle": "Create/Edit your categories/subcategories",
+  "categories_tab": "Manage Categories",
+  "no_categories": "No Categories Found!!!",
+  "subcategories_button": "SubCategories",
+
+  "subcategories_tab": "Manage SubCategories"
 }

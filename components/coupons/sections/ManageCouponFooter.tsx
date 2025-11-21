@@ -26,7 +26,6 @@ export default function ManageCouponFooter({
   onClose,
   onSaveSuccess,
   onAddNew,
-  coupons = [],
   onCancel,
 }: ManageCouponFooterProps) {
   const { t } = useTranslation();

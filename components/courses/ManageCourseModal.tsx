@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import Modal from "@/components/common/Modal";
 import { useTranslation } from "@/contexts/TranslationContext";
 import { useToast } from "@/contexts/ToastContext";
@@ -114,7 +114,9 @@ export default function ManageCourseModal({
 
       try {
         const res = await fetch(
-          `/api/storage/download?path=${encodeURIComponent(course.thumbnail_url)}`,
+          `/api/storage/download?path=${encodeURIComponent(
+            course.thumbnail_url
+          )}`,
           { headers: { Authorization: `Bearer ${token}` } }
         );
         const data = await res.json();
@@ -142,7 +144,9 @@ export default function ManageCourseModal({
 
     setTimeout(() => {
       setActiveTab(
-        isViewMode ? COURSE_TABS_VIEW[0].value : COURSE_TABS_CREATE_EDIT[0].value
+        isViewMode
+          ? COURSE_TABS_VIEW[0].value
+          : COURSE_TABS_CREATE_EDIT[0].value
       );
       setIsPaid(course?.is_paid ?? false);
       setCourseTitle(course?.course_title ?? "");
@@ -159,15 +163,46 @@ export default function ManageCourseModal({
       setOriginalPrice(course?.original_price ?? "");
       setDiscountPrice(course?.discount_price ?? "");
       setEffectivePrice(course?.effective_price ?? "");
-      setCourseValidity(course?.validity_code ?? "");
+
+      if (mode === "create") {
+        const defaultValidity =
+          masterData.find(
+            (m) => m.code_type === "COURSEVALIDITY" && m.is_default
+          )?.code_code ?? "";
+
+        setCourseValidity(defaultValidity);
+
+        if (defaultValidity === "SINGLEVALIDITY") {
+          const defaultSingleValidity = masterData
+            .find(
+              (m) =>
+                m.code_type === "COURSEVALIDITY" &&
+                m.code_code === "SINGLEVALIDITY"
+            )
+            ?.sub_codes.find((s) => s.is_default)?.subcode_code;
+
+          setCourseSingleValidity(defaultSingleValidity ?? "");
+          setExpiryDate("");
+        } else if (defaultValidity === "COURSEEXPIRY") {
+          setExpiryDate("");
+          setCourseSingleValidity("");
+        } else {
+          setExpiryDate("");
+          setCourseSingleValidity("");
+        }
+      } else {
+        setCourseValidity(course?.validity_code ?? "");
+        setCourseSingleValidity(course?.single_validity_code ?? "");
+        setExpiryDate(course?.expiry_date ?? "");
+      }
+
       setExpiryDate(course?.expiry_date ?? "");
-      setCourseSingleValidity(course?.single_validity_code ?? "");
       setMarkNew(course?.mark_new ?? false);
       setMarkFeatured(course?.mark_featured ?? false);
       setHasOfflineMaterial(course?.has_offline_material ?? false);
       setErrors({});
     }, 0);
-  }, [isOpen, mode, course, isViewMode, categories, subCategories]);
+  }, [isOpen, mode, course, isViewMode, masterData, categories, subCategories]);
 
   // Auto-calculate effective price
   useEffect(() => {
@@ -233,7 +268,10 @@ export default function ManageCourseModal({
 
   // Handle Tab Changes
   const handleTabChange = (tab: TabType) => {
-    if (activeTab === "Course Details" && (mode === "create" || mode === "edit")) {
+    if (
+      activeTab === "Course Details" &&
+      (mode === "create" || mode === "edit")
+    ) {
       if (!validateCourseDetails()) return;
     }
 

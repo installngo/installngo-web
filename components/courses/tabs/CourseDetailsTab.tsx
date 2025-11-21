@@ -10,8 +10,8 @@ import CourseValidityFields from "@/components/courses/sections/CourseValidityFi
 import { useTranslation } from "@/contexts/TranslationContext";
 import { useToast } from "@/contexts/ToastContext";
 
-import { Category } from "@/components/courses/types/Category";
-import { SubCategory } from "@/components/courses/types/SubCategory";
+import { Category } from "@/components/common/types/Category";
+import { SubCategory } from "@/components/common/types/SubCategory";
 import { MasterRecord } from "@/components/courses/types/MasterRecord";
 
 interface CourseDetailsTabProps {

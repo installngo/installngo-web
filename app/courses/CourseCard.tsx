@@ -14,7 +14,7 @@ interface CourseCardProps {
 // Cache signed URLs with expiry
 const signedUrlCache = new Map<string, { url: string; expiresAt: number }>();
 
-export default function CourseCard({ course }: CourseCardProps) {
+export default function CourseCard({ course, onEdit }: CourseCardProps) {
   const [imageUrl, setImageUrl] = useState<string>("/course-placeholder.png");
 
   useEffect(() => {
@@ -42,14 +42,13 @@ export default function CourseCard({ course }: CourseCardProps) {
         const json: { success: boolean; url?: string } = await res.json();
 
         if (json.success && json.url) {
-          // Preload image
           const img = new window.Image();
           img.src = json.url;
           img.onload = () => {
             if (!isMounted) return;
             signedUrlCache.set(thumbnail, {
               url: json.url!,
-              expiresAt: Date.now() + 5 * 60 * 1000, // 5 minutes
+              expiresAt: Date.now() + 5 * 60 * 1000,
             });
             setImageUrl(json.url!);
           };
@@ -69,7 +68,7 @@ export default function CourseCard({ course }: CourseCardProps) {
     loadImage();
 
     return () => {
-      isMounted = false; // cleanup
+      isMounted = false;
     };
   }, [course.thumbnail_url]);
 
@@ -86,6 +85,16 @@ export default function CourseCard({ course }: CourseCardProps) {
           className="object-cover w-full h-full"
           loading="lazy"
         />
+      </div>
+
+      {/* Footer with Edit Button */}
+      <div className="p-3 flex justify-end">
+        <button
+          onClick={() => onEdit?.(course.course_id)}
+          className="text-blue-600 hover:text-blue-800 underline text-sm transition"
+        >
+          Edit
+        </button>
       </div>
     </div>
   );

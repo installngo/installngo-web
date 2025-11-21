@@ -3,14 +3,15 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { useAuth } from "@/contexts/AuthContext";
 import { Course } from "@/components/courses/types/Course";
-import { Category } from "@/components/courses/types/Category";
-import { SubCategory } from "@/components/courses/types/SubCategory";
+import { Category } from "@/components/common/types/Category";
+import { SubCategory } from "@/components/common/types/SubCategory";
 import { MasterRecord } from "@/components/courses/types/MasterRecord";
 
 import CoursesHeader from "./CoursesHeader";
 import CoursesGrid from "./CoursesGrid";
 import CourseModalWrapper from "./modals/CourseModalWrapper";
 import CouponModalWrapper from "./modals/CouponModalWrapper";
+import CategoriesModalWrapper from "./modals/CategoriesModalWrapper";
 import { useLoading } from "@/contexts/LoadingContext";
 
 export default function CoursesContent() {
@@ -31,7 +32,8 @@ export default function CoursesContent() {
   const [courseModalMode, setCourseModalMode] = useState<
     "create" | "edit" | "view"
   >("create");
-  const [isCouponModalOpen, setIsCouponModalOpen] = useState(false);
+  const [isCouponModalOpen, setIsCouponModalOpen] = useState(false);  
+  const [isCategoriesModalOpen, setIsCategoriesModalOpen] = useState(false);
 
   // Memoized start/stop wrappers
   const safeStart = useCallback((msg?: string) => start(msg), [start]);
@@ -141,6 +143,7 @@ export default function CoursesContent() {
           setIsCourseModalOpen(true);
         }}
         onOpenCouponModal={() => setIsCouponModalOpen(true)}
+        onOpenCategoriesModal={() => setIsCategoriesModalOpen(true)}
         hasCourses={courses.length > 0}
       />
       <CoursesGrid
@@ -177,6 +180,13 @@ export default function CoursesContent() {
         isOpen={isCouponModalOpen}
         onClose={() => setIsCouponModalOpen(false)}
         courses={courses}
+      />
+      <CategoriesModalWrapper
+        isOpen={isCategoriesModalOpen}
+        onClose={() => setIsCategoriesModalOpen(false)}
+        categories={categories}
+        subCategories={subCategories}
+        onSaveSuccess={() => fetchCategories()}
       />
     </div>
   );

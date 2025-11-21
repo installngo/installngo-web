@@ -1,10 +1,9 @@
 "use client";
 
-import React from "react";
 import ManageCourseModal from "@/components/courses/ManageCourseModal";
 import { Course } from "@/components/courses/types/Course";
-import { Category } from "@/components/courses/types/Category";
-import { SubCategory } from "@/components/courses/types/SubCategory";
+import { Category } from "@/components/common/types/Category";
+import { SubCategory } from "@/components/common/types/SubCategory";
 import { MasterRecord } from "@/components/courses/types/MasterRecord";
 
 interface Props {

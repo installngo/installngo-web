@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import Button from "@/components/common/Button";
 import Input from "@/components/common/Input";
 import { useTranslation } from "@/contexts/TranslationContext";
@@ -10,6 +9,7 @@ interface Props {
   setSearchTerm: (v: string) => void;
   onCreateCourse: () => void;
   onOpenCouponModal: () => void;
+  onOpenCategoriesModal: () => void;
   hasCourses: boolean;
 }
 
@@ -18,6 +18,7 @@ export default function CoursesHeader({
   setSearchTerm,
   onCreateCourse,
   onOpenCouponModal,
+  onOpenCategoriesModal,
   hasCourses,
 }: Props) {
   const { t } = useTranslation();
@@ -32,6 +33,7 @@ export default function CoursesHeader({
           {t("manageCoursesSubtitle")}
         </h3>
       </div>
+
       <div className="flex flex-col md:flex-row md:items-center gap-3">
         <Input
           placeholder={t("searchCourses", "Search courses...")}
@@ -40,6 +42,7 @@ export default function CoursesHeader({
           className="w-full md:w-60"
           inputSize="sm"
         />
+
         <div className="flex gap-2">
           <Button
             variant="primary"
@@ -49,12 +52,21 @@ export default function CoursesHeader({
           >
             {t("create_coupon_button")}
           </Button>
+
           <Button
             variant="primary"
             onClick={onCreateCourse}
             className="h-8 w-30 text-sm"
           >
             {t("create_course_button")}
+          </Button>
+
+          <Button
+            variant="secondary"
+            onClick={onOpenCategoriesModal}
+            className="h-8 w-36 text-sm"
+          >
+            {t("manage_categories_button")}
           </Button>
         </div>
       </div>

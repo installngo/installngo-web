@@ -1,6 +1,3 @@
-export const dynamic = "force-dynamic";
-export const runtime = "nodejs";
-
 import { NextRequest, NextResponse } from "next/server";
 import { supabaseServer } from "@/lib/supabaseServer";
 import { requireAuth } from "@/lib/authMiddleware";
@@ -158,7 +155,10 @@ export async function PUT(req: NextRequest) {
       p_is_paid: body.is_paid ?? false,
       p_course_title: body.course_title ?? null,
       p_course_description: body.course_description ?? null,
-      p_thumbnail_url: getRelativeFilePath(body.thumbnail_url),
+      p_thumbnail_url:
+        body.thumbnail_url && /^https?:\/\//.test(body.thumbnail_url)
+          ? getRelativeFilePath(body.thumbnail_url)
+          : body.thumbnail_url ?? null,
       p_category_code: body.category_code ?? null,
       p_sub_category_code: body.subcategory_code ?? null,
       p_original_price: body.original_price ?? null,

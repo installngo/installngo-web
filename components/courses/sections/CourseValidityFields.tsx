@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useMemo } from "react";
+import { useMemo } from "react";
 import Select from "@/components/common/Select";
 import Input from "@/components/common/Input";
 import { useTranslation } from "@/contexts/TranslationContext";
@@ -54,21 +54,45 @@ export default function CourseValidityFields({
   const localValues = useMemo(() => {
     return {
       courseValidity:
-        courseValidity ||
-        masterData.find((m) => m.code_type === "COURSEVALIDITY" && m.is_default)
-          ?.code_code ||
-        "",
+        courseValidity !== undefined && courseValidity !== null
+          ? courseValidity
+          : masterData.find(
+              (m) => m.code_type === "COURSEVALIDITY" && m.is_default
+            )?.code_code || "",
+
       singleValidity:
-        courseSingleValidity ||
-        singleValidityMaster?.sub_codes.find((s) => s.is_default)?.subcode_code ||
-        "",
+        courseSingleValidity !== undefined && courseSingleValidity !== null
+          ? courseSingleValidity
+          : singleValidityMaster?.sub_codes.find((s) => s.is_default)
+              ?.subcode_code || "",
+
       expiryDate: isoToDateInput(expiryDate),
     };
-  }, [courseValidity, courseSingleValidity, expiryDate, masterData, singleValidityMaster]);
+  }, [
+    courseValidity,
+    courseSingleValidity,
+    expiryDate,
+    masterData,
+    singleValidityMaster,
+  ]);
 
   // Handlers
   const handleCourseValidityChange = (val: string) => {
     onCourseValidityChange(val);
+
+    if (!val) {
+      onCourseSingleValidityChange("");
+      onExpiryDateChange("");
+    }
+
+    if (val === "SINGLEVALIDITY" && !courseSingleValidity) {
+      const defaultSingle =
+        singleValidityMaster?.sub_codes.find((s) => s.is_default)
+          ?.subcode_code || "";
+      onCourseSingleValidityChange(defaultSingle);
+    }
+
+    // normal behaviour
     if (val !== "SINGLEVALIDITY") onCourseSingleValidityChange("");
     if (val !== "COURSEEXPIRY") onExpiryDateChange("");
 
